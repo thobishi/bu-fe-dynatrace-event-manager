@@ -24,9 +24,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/bootstrap-4.4.1/bootstrap-4.4.1-dist/css/bootstrap.min.css",
+              "src/assets/fontawesome-free-5.13.0/fontawesome-free-5.13.0-web/css/all.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/jquery-3.4.1.slim.min.js",
+              "src/assets/popper.js",
+              "src/assets/bootstrap-4.4.1/bootstrap-4.4.1-dist/js/bootstrap.min.js",
+              "src/assets/fontawesome-free-5.13.0/fontawesome-free-5.13.0-web/js/all.min.js"
+            ]
           },
           "configurations": {
             "production": {
