@@ -1,0 +1,10 @@
+.bu-right-panel {
+    min-height: 15em;
+}
+.bu-rule-name {
+    font-size: 11px;
+}
+.bu-rule-count {
+    font-size: 10px;
+    color: #b0bec5;
+}
