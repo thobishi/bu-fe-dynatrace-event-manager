@@ -3,7 +3,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 //
-import { BuDiskEvent } from '../bu-interfaces';
+import { BuDiskEvent, BuDiskEventDetail } from '../bu-interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +20,9 @@ export class BuDiskEventService {
     //
     return this.http.get<BuDiskEvent[]>(`${this.bu_api_server}${uri}`);
   }
-  getDiskEventPyRuleName(rule_name: string):Observable<DiskEventDetail> {
+  getDiskEventByRuleName(rule_name: string):Observable<BuDiskEventDetail> {
     const uri = '/api/dynatrace-event-list/';
     //
-    return this.http.get<DiskEventDetail>(`${this.bu_api_server}${uri}${rule_name}`);
+    return this.http.get<BuDiskEventDetail>(`${this.bu_api_server}${uri}${rule_name}`);
   }
-}
-export interface DiskEventDetail {
-  Rule_name: string;
-  Rule_Ids: string;
-  Rules: any[];
 }

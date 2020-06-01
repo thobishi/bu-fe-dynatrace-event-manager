@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 //
 import { BuDiskEventService} from '../../../bu-shared-objects/bu-services';
 //
@@ -12,25 +12,12 @@ import { BuDiskEvent } from '../../../bu-shared-objects/bu-interfaces'
 export class BuDynatraceDiskEventComponent implements OnInit {
   //
   buDiskEvents: BuDiskEvent[] = [];
+  buDiskEvent: BuDiskEvent;
+  buDiskEventDetail: any;
   loading = false;
-  constructor(private buDiskEventService: BuDiskEventService) { }
+  constructor(private buDiskEventService: BuDiskEventService, private el: ElementRef) { }
 
   ngOnInit(): void {
-    this.getDiskEvents();
-  }
-  //
-  getDiskEvents() {
-    //
-    this.loading = true;
-    this.buDiskEventService.getDiskEvents()
-    .subscribe(
-      //
-      (res:BuDiskEvent[]) => {
-        //
-        this.buDiskEvents = res;
-        this.loading = false;
-      }
-    );
   }
 
 }

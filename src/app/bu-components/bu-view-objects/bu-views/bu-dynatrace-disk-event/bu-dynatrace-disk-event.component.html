@@ -26,65 +26,11 @@
 
     <div class="row m-0">
 
-        <div class="col-9 p-1">
+        <div class="col-12 p-1">
 
-            <div *ngIf="!loading" class="list-group-item p-1">
+            <div  class="list-group-item p-1">
 
-                <div  *ngFor="let DiskEvent of buDiskEvents" class="row m-0">
-
-                    <div class="col-12 p-1">
-    
-                        <div class="list-group-item p-1">
-    
-                            <div class="row m-0">
-            
-                                <div class="col-9 p-0">
-            
-                                    <div class="bu-rulename bu-arrange-content-middle-left-column">
-                                
-                                        <span class="bu-rule-name">{{ DiskEvent.rule_name }}</span>
-                                        <span class="bu-rule-count">rule instances: {{ DiskEvent.event_count }}</span>
-                    
-                                    </div>
-            
-                                </div>
-            
-                                <div class="col-3 p-0">
-            
-                                    <div class="bu-edit float-right">
-                                        
-                                        <button data-toggle="modal" data-target="#bu-disk-event-detail" class="btn btn-sm btn-outline-primary">Edit</button>
-            
-                                    </div>
-            
-                                </div>
-            
-                            </div>
-            
-                        </div>
-    
-                    </div>
-    
-                </div>
-
-            </div>
-
-            <div *ngIf="loading" class="bu-loading-container list-group-item p-1 text-center bu-arrange-content-middle-column">
-
-                <app-bu-loading></app-bu-loading>
-                <br>
-                <span>Getting Disk Events...</span>
-
-            </div>
-
-        </div>
-
-        <div class="col-3 p-1">
-
-            <div class="list-group-item bu-right-panel">
-                
-                <span>Title</span>
-                <hr>
+                <router-outlet></router-outlet>
 
             </div>
 
@@ -93,5 +39,3 @@
     </div>
 
 </div>
-
-<app-bu-dynatrace-disk-event-detail></app-bu-dynatrace-disk-event-detail>

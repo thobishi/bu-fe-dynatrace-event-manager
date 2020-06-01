@@ -9,6 +9,10 @@ import { BuDynatraceDiskEventComponent } from './bu-components/bu-view-objects/b
 import { BuDynatraceComponent } from './bu-components/bu-view-objects/bu-views/bu-dynatrace/bu-dynatrace.component';
 import { BuDynatraceDiskEventDetailComponent } from './bu-components/bu-view-objects/bu-views/bu-dynatrace-disk-event-detail/bu-dynatrace-disk-event-detail.component';
 import { BuLoadingComponent } from './bu-components/bu-view-objects/bu-widgets/bu-loading/bu-loading.component';
+import { BuDynatraceDiskEventListComponent } from './bu-components/bu-view-objects/bu-views/bu-dynatrace-disk-event-list/bu-dynatrace-disk-event-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BuDiskEventFormBuilderComponent } from './bu-components/bu-view-objects/bu-widgets/bu-disk-event-form-builder/bu-disk-event-form-builder.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { BuLoadingComponent } from './bu-components/bu-view-objects/bu-widgets/b
     BuDynatraceDiskEventComponent,
     BuDynatraceComponent,
     BuDynatraceDiskEventDetailComponent,
-    BuLoadingComponent
+    BuLoadingComponent,
+    BuDynatraceDiskEventListComponent,
+    BuDiskEventFormBuilderComponent
   ],
   imports: [
     BrowserModule,
     BuAppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
